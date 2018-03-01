@@ -1,0 +1,41 @@
+{
+  "name": "micro-correlation-id",
+  "version": "1.0.0",
+  "decription": "Correlate http requests across microservices built with zeit/micro",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "homepage": "https://github.com/tafarij/micro-correlation-id",
+  "author": "Tafari Johnson <dev.fyah@gmail.com> (http://tafarijohnson.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tafarij/micro-correlation-id"
+  },
+  "bugs": {
+    "url": "https://github.com/tafarij/micro-correlation-id/issues"
+  },
+  "keywords": [
+    "micro",
+    "correlation",
+    "debug",
+    "logging",
+    "microservice"
+  ],
+  "scripts": {
+    "test": "xo && nyc ava"
+  },
+  "xo": {
+    "space": true
+  },
+  "dependencies": {
+    "continuation-local-storage": "^3.2.1",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "micro": "^9.1.0",
+    "nyc": "^11.4.1",
+    "request-promise": "^4.2.2",
+    "test-listen": "^1.1.0",
+    "xo": "^0.20.3"
+  }
+}
