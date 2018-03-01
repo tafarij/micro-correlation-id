@@ -21,7 +21,8 @@
     "microservice"
   ],
   "scripts": {
-    "test": "xo && nyc ava"
+    "test": "xo && nyc --reporter=html --reporter=text ava",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "xo": {
     "space": true
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "ava": "^0.25.0",
+    "coveralls": "^3.0.0",
     "micro": "^9.1.0",
     "nyc": "^11.4.1",
     "request": "^2.83.0",
