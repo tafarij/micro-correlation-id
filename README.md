@@ -3,7 +3,7 @@
 > Correlate http requests across microservices built with [micro](https://github.com/zeit/micro).
 
 
-[![Build Status](https://travis-ci.org/tafarij/mico-correlation-id.svg?branch=master)](https://travis-ci.org/tafarij/mico-correlation-id) [![Coverage Status](https://coveralls.io/repos/github/tafarij/mico-correlation-id/badge.svg?branch=master)](https://coveralls.io/github/tafarij/mico-correlation-id?branch=master)
+[![Build Status](https://travis-ci.org/tafarij/micro-correlation-id.svg?branch=master)](https://travis-ci.org/tafarij/micro-correlation-id) [![Coverage Status](https://coveralls.io/repos/github/tafarij/micro-correlation-id/badge.svg?branch=master)](https://coveralls.io/github/tafarij/micro-correlation-id?branch=master)
 
 This a [micro](https://github.com/zeit/micro) module for setting a [correlation id](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) per HTTP request. The correlation id associated with a request remains consistent across async calls made within the scope of the request handler.
 
