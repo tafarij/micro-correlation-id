@@ -7,7 +7,7 @@
 
 This a [micro](https://github.com/zeit/micro) module for setting a [correlation id](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) per HTTP request. The correlation id associated with a request remains consistent across async calls made within the scope of the request handler.
 
-This module is inspired by [express-correlation-id](https://github.com/toboid/express-correlation-id) and makes use of [continuation-local-storage](https://github.com/othiym23/node-continuation-local-storage)
+This module is inspired by [express-correlation-id](https://github.com/toboid/express-correlation-id) and makes use of [cls-hooked](https://github.com/jeff-lewis/cls-hooked)
 
 ## Installation
 ```bash
