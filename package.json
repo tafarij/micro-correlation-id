@@ -1,6 +1,6 @@
 {
   "name": "micro-correlation-id",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "decription": "Correlate http requests across microservices built with zeit/micro",
   "license": "MIT",
   "main": "lib/index.js",
@@ -28,7 +28,7 @@
     "space": true
   },
   "dependencies": {
-    "continuation-local-storage": "^3.2.1",
+    "cls-hooked": "^4.2.2",
     "uuid": "^3.2.1"
   },
   "devDependencies": {
@@ -39,6 +39,7 @@
     "request": "^2.83.0",
     "request-promise": "^4.2.2",
     "test-listen": "^1.1.0",
+    "then-sleep": "^1.0.1",
     "xo": "^0.20.3"
   }
 }

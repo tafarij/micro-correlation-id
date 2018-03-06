@@ -2,11 +2,12 @@ const micro = require('micro');
 const listen = require('test-listen');
 const request = require('request-promise');
 const test = require('ava');
+const sleep = require('then-sleep');
 const {correlator, getId} = require('../lib');
 
 const testId = 'test-correlation-id';
 const service = async req => {
-  return {id: req.correlationId()};
+  return req.correlationId();
 };
 
 test('set id from incoming request', async t => {
@@ -15,11 +16,10 @@ test('set id from incoming request', async t => {
 
   const body = await request({
     uri,
-    headers: {'x-correlation-id': testId},
-    json: true
+    headers: {'x-correlation-id': testId}
   });
 
-  t.is(body.id, testId, 'req.correlationId() should return id from header of inbound request');
+  t.is(body, testId, 'req.correlationId() should return id from header of inbound request');
 });
 
 test('custom header key', async t => {
@@ -28,11 +28,10 @@ test('custom header key', async t => {
 
   const body = await request({
     uri,
-    headers: {'x-test-header': testId},
-    json: true
+    headers: {'x-test-header': testId}
   });
 
-  t.is(body.id, testId, 'req.correlationId() should return id from custom header of inbound request');
+  t.is(body, testId, 'req.correlationId() should return id from custom header of inbound request');
 });
 
 test('req.correlationId() and getId()', async t => {
@@ -51,4 +50,20 @@ test('req.correlationId() and getId()', async t => {
   });
 
   t.is(body.correlationId, body.getId, 'req.correlationId() and getId() should return the same id');
+});
+
+test('with await', async t => {
+  const svc = async req => {
+    await sleep(10);
+    return req.correlationId();
+  };
+  const server = micro(correlator()(svc));
+  const uri = await listen(server);
+
+  const body = await request({
+    uri,
+    headers: {'x-correlation-id': testId}
+  });
+
+  t.is(body, testId, 'should keep context after await call');
 });
