@@ -29,17 +29,17 @@
   },
   "dependencies": {
     "cls-hooked": "^4.2.2",
-    "uuid": "^3.2.1"
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "ava": "^0.25.0",
-    "coveralls": "^3.0.0",
-    "micro": "^9.1.0",
-    "nyc": "^11.4.1",
-    "request": "^2.83.0",
+    "coveralls": "^3.0.2",
+    "micro": "^9.3.3",
+    "nyc": "^13.1.0",
+    "request": "^2.88.0",
     "request-promise": "^4.2.2",
     "test-listen": "^1.1.0",
     "then-sleep": "^1.0.1",
-    "xo": "^0.20.3"
+    "xo": "^0.23.0"
   }
 }

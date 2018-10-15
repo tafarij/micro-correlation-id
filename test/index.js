@@ -6,7 +6,7 @@ const sleep = require('then-sleep');
 const {correlator, getId} = require('../lib');
 
 const testId = 'test-correlation-id';
-const service = async req => {
+const service = req => {
   return req.correlationId();
 };
 
@@ -35,7 +35,7 @@ test('custom header key', async t => {
 });
 
 test('req.correlationId() and getId()', async t => {
-  const svc = async req => {
+  const svc = req => {
     return {
       correlationId: req.correlationId(),
       getId: getId()
