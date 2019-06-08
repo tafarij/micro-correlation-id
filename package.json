@@ -1,6 +1,6 @@
 {
   "name": "micro-correlation-id",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "decription": "Correlate http requests across microservices built with zeit/micro",
   "license": "MIT",
   "main": "lib/index.js",
