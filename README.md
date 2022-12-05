@@ -2,8 +2,6 @@
 
 > Correlate http requests across microservices built with [micro](https://github.com/zeit/micro).
 
-[![npm version](https://badge.fury.io/js/micro-correlation-id.svg)](https://badge.fury.io/js/micro-correlation-id)
-
 This a [micro](https://github.com/zeit/micro) module for setting a [correlation id](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) per HTTP request. The correlation id associated with a request remains consistent across async calls made within the scope of the request handler.
 
 This module is inspired by [express-correlation-id](https://github.com/toboid/express-correlation-id) and makes use of [AsyncLocalStorage](https://nodejs.org/api/async_context.html#class-asynclocalstorage).
