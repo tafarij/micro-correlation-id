@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/tafarij/micro-correlation-id/compare/v2.0.0...v2.0.1) (2023-06-28)
+
+
+### Bug Fixes
+
+* Bump json5 from 2.2.1 to 2.2.3 ([#19](https://github.com/tafarij/micro-correlation-id/issues/19)) ([81c302c](https://github.com/tafarij/micro-correlation-id/commit/81c302c93a57146e8dc3186e82ae68c7d47d1116))
+
 # [2.0.0](https://github.com/tafarij/micro-correlation-id/compare/v1.2.1...v2.0.0) (2022-12-04)
 
 
